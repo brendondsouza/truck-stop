@@ -13,12 +13,21 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  caption: {
+  likes: {
+    type: Number,
+    required: true,
+  },
+  description: {
     type: String,
     required: true,
   },
-  likes: {
+  price: {
     type: Number,
+    required: true,
+  },
+  category: {
+    type: String,
+    enum: ['pickup', 'box', 'van'],
     required: true,
   },
   user: {
